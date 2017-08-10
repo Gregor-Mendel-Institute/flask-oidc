@@ -827,6 +827,6 @@ class OpenIDConnect(object):
                 key_data = crypto.load_certificate(crypto.FILETYPE_ASN1, bin_key) # parse DER data
                 d[key['kid']] = crypto.dump_certificate(crypto.FILETYPE_PEM, key_data)
             else:
-                raise Exception("ccurrently only validation through 'x5c' parameter is ")
+                raise Exception("ccurrently only validation through 'x5c' parameter is supported.")
 
         return d
